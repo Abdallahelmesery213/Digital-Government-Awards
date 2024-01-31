@@ -1,4 +1,8 @@
 @font-face{
+    font-family: bruumFont;
+    src: url(./../fonts/Bruum\ FY\ Light.otf);
+}
+@font-face{
     font-family: mediumFont;
     src: url(./../fonts/NewJune-Medium.otf);
 }
@@ -15,7 +19,7 @@
     src: url(./../fonts/Acumin\ Pro\ Medium.otf);
 }
 *{
-    font-family: mediumFont;
+    font-family: bruumFont;
 }
 ul{
     margin-top: 0;
@@ -24,12 +28,12 @@ ul{
 /* start home sreen */
 
 /* start navbar */
-/* header{
+header{
     margin-bottom: 20px;
-} */
-/* header .left-part{
-    margin-top: 20px;
-} */
+}
+header .left-part{
+    min-height: 120px;
+}
 header .left-part h3{
     font-size: 18px;
     font-family: boldFont;
@@ -40,6 +44,7 @@ header .right-part{
     width: 75%;
     right: 0;
     top: 0;
+    min-height: 120px;
 }
 header .right-part .nav1{
     background-color: #000;
@@ -54,7 +59,6 @@ header .right-part .nav2 ul li{
 }
 header .right-part .nav1 ul li,
 header .right-part .nav2 ul li{
-    font-family: lightFont;
     font-size: 14px;
     position: relative;
     margin-left: 4px;
@@ -112,7 +116,7 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     /* font-family: acuminLightFont; */
     font-size: 15px;
     margin-bottom: 0;
-    color: #ddd;
+    color: #ebe3e3;
 }   
 .counter-top button.btn{
     font-family: acuminLightFont;
@@ -202,9 +206,12 @@ header .right-part .nav2 ul li:not(:last-child)::after{
 }
 .counter h2{
     color: #1b75ba;
-    font-size: 28px;
+    font-size: 30px;
     font-family: boldFont;
     margin: 5px;
+}
+.counter img {
+    margin: 10px auto;
 }
 .counter i{
     font-size: 22px;
@@ -212,17 +219,15 @@ header .right-part .nav2 ul li:not(:last-child)::after{
 }
 .counter p{
     color: #888686;
-    font-family: lightFont;
 }
 /* end counter */
 
 /* start banner_2 */
-.banner .banner-description hr{
-    color: #a87b22;
-    width: 100%;
-}
 .banner .banner-description h3{
-    color: #c99b14 !important;
+    font-size: 30px;
+    margin-top: 20%;
+    font-family: boldFont;
+    color: #1974bb;
 }
 .banner_3 .banner-description button.primary{
     background-color: #1b75ba !important;
@@ -252,8 +257,7 @@ header .right-part .nav2 ul li:not(:last-child)::after{
 }
 .banner_2 .banner-description p{
     color: #000;
-    font-size: 18px;
-    font-family: acuminMediumFont;
+    font-size: 20px;
     margin-top: 0px;
 }
 .banner_2 .banner-description p a{
@@ -278,27 +282,30 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
+    height: 750px;
 }
-.banner_3 .banner-description h3{
+ /* .banner-description h3{
     font-size: 30px;
-    margin-top: 70%;
+    margin-top: 20%;
     font-family: boldFont;
-}
-.banner_3 .banner-description hr{
-    background-color: #a87b22;
+    color: #1974bb;
+} */
+ .banner-description .hr{
     width: 94%;
-    border-width: 2px;
+    border-bottom: 2px solid #a87b22;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.banner_3 .banner-description p{
+ .banner-description p{
     color: #000;
-    font-size: 18px;
-    font-family: acuminMediumFont;
+    font-size: 20px;
+    /* font-family: acuminMediumFont; */
     margin-top: 0px;
 }
-.banner_3 .banner-description button{
-    font-family: lightFont;
+ .banner-description button{
+    /* font-family: lightFont; */
     border-radius: 5px;
+    margin-top: 3%;
 }
 /* end banner_3 */
 
@@ -309,28 +316,10 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
+    height: 750px;
 }
-.banner_4 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 50%;
-    font-family: boldFont;
-}
-.banner_4 .banner-description hr{
-    background-color: #a87b22;
-    width: 75%;
-    display: inline-flex;
-    border-width: 2px;
-}
-.banner_4 .banner-description p{
-    font-size: 18px;
-    /* font-family: lightFont; */
-    margin-top: 0px;
-}
-.banner_4 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
+.bannerRight .hr{
+    margin-left: auto;
 }
 /* end banner_4 */
 
@@ -341,28 +330,9 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
-}
-.banner_5 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 47%;
-    font-family: boldFont;
-}
-.banner_5 .banner-description hr{
-    background-color: #a87b22;
-    width: 70%;
-    border-width: 2px;
-}
-.banner_5 .banner-description p{
-    color: #000;
-    font-size: 18px;
-    font-family: lightFont;
-    margin-top: 0px;
-}
-.banner_5 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
+    height: 750px;
+    border-bottom: 10px solid #1b75ba;
+    margin-bottom: 40px;
 }
 /* end banner_5 */
 
@@ -373,31 +343,9 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
-    border-bottom: 10px solid #009245;
-}
-.banner_6 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 50%;
-    font-family: boldFont;
-}
-.banner_6 .banner-description hr{
-    background-color: #a87b22;
-    width: 50%;
-    display: inline-flex;
-    margin-right: 0;
-    border-width: 2px;
-}
-.banner_6 .banner-description p{
-    color: #000;
-    font-size: 18px;
-    font-family: lightFont;
-    margin-top: 0px;
-}
-.banner_6 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
+    height: 750px;
+    border-bottom: 10px solid #1b75ba;
+    margin-bottom: 40px;
 }
 /* end banner_6 */
 
@@ -408,101 +356,12 @@ header .right-part .nav2 ul li:not(:last-child)::after{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 600px;
-    margin-bottom: 30px;
+    height: 650px;
+    margin-bottom: 40px;
 }
-.banner_7 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 70%;
-    font-family: boldFont;
-}
-.banner_7 .banner-description hr{
-    background-color: #a87b22;
-    width: 60%;
-    margin-left: 0px;
-    border-width: 2px;
-}
-.banner_7 .banner-description p{
-    color: #000;
-    font-size: 18px;
-    font-family: lightFont;
-    margin-top: 0px;
-}
-.banner_7 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
-}
+
 /* end banner_7 */
 
-/* start banner_8 */
-.banner_8{
-    position: relative;
-    background-image: url(./../images/BOD_banner_7.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 650px;
-    margin-bottom: 30px;
-}
-.banner_8 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 47%;
-    font-family: boldFont;
-}
-.banner_8 .banner-description hr{
-    background-color: #a87b22;
-    width: 60%;
-    display: inline-flex;
-    margin-left: 0px;
-    border-width: 2px;
-}
-.banner_8 .banner-description p{
-    color: #000;
-    font-size: 18px;
-    font-family: lightFont;
-    margin-top: 0px;
-}
-.banner_8 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
-}
-/* end banner_8 */
-/* start banner_9 */
-.banner_9{
-    position: relative;
-    background-image: url(./../images/BOD_banner_8.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 650px;
-    margin-bottom: 30px;
-}
-.banner_9 .banner-description h3{
-    color: #a87b22;
-    font-size: 30px;
-    margin-top: 47%;
-    font-family: boldFont;
-}
-.banner_9 .banner-description hr{
-    background-color: #a87b22;
-    width: 60%;
-    display: inline-flex;
-    margin-left: 0px;
-    border-width: 2px;
-}
-.banner_9 .banner-description p{
-    color: #000;
-    font-size: 18px;
-    font-family: lightFont;
-    margin-top: 0px;
-}
-.banner_9 .banner-description button{
-    font-family: lightFont;
-    border-radius: 5px;
-}
-/* end banner_9 */
 .categories img{
     margin-bottom: 25px;
 }
@@ -522,6 +381,7 @@ footer .logo span{
 footer h5{
     color: #b48439;
     font-size: 17px;
+    font-weight: bold;
 }
 footer form button.btn{
     display: flex;
@@ -530,7 +390,6 @@ footer form button.btn{
 footer .links span{
     color: #000;
     font-size: 14px;
-    font-family: lightFont;
     cursor: pointer;
 }
 footer .links span:hover{
@@ -540,10 +399,10 @@ footer .links span:hover{
 footer .subscribe-label{
     color: #b28032;
     font-size: 17px;
+    font-weight: bold;
 }
 footer p.footr{
     font-size: 15px;
-    font-family: lightFont;
     margin-top: 10px;
 }
 footer .copy-right{
@@ -552,13 +411,15 @@ footer .copy-right{
 }
 footer .copy-right p{
     font-size: 15px;
-    font-family: lightFont;
     margin: auto;
     padding: 15px 0;
     text-align: center;
 }
-footer form input, footer form .btn{
-    max-height: 35px;
+footer form input, footer form .btn, footer .icon-download img{
+    height: 35px;
+}
+footer .icon-download img{
+    height: 43px;
 }
 footer form .btn{
     font-size: 15px;
@@ -589,18 +450,13 @@ footer form .btn{
     .banner_2 .banner-description p {
         font-size: 15px;
     }
-    .banner_3 .banner-description h3{
-        margin-top: 85%;
+    .banner-description h3{
+       font-size: 20px !important;
     }
-    .banner_5 .banner-description h3 {
-        margin-top: 60%;
+    .banner-description p{
+        font-size: 18px;
     }
-    .banner_7 .banner-description h3 {
-        font-size: 20px;
-    }
-    .banner_7 .banner-description h3 {
-        margin-top: 75%;
-    }
+    
 }
 @media only screen and (max-width: 842px) and (min-width: 768px)  {
     .counter-top button.btn{
@@ -614,6 +470,13 @@ footer form .btn{
     }
 }
 @media only screen and (max-width: 767px) {
+    header .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    header .nav1{
+        padding: 15px 0;
+    }
     header .right-part {
         position: relative;
         width: 100%;
@@ -672,7 +535,7 @@ footer form .btn{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 100%;
         margin: 25px auto;
     }
     .banner_1 .banner-description {
@@ -710,16 +573,12 @@ footer form .btn{
     .header h2{
         font-size: 20px;
     }
-    .banner_3 .banner-description h3{
-        margin-top: 40%;
-    }
+    
     .banner .banner-description hr{
         margin: 10px auto !important;
     }
     .banner_4 .banner-description hr,
-    .banner_7 .banner-description hr,
-    .banner_8 .banner-description hr,
-    .banner_9 .banner-description hr{
+    .banner_7 .banner-description hr{
         display: flex;
         margin: 10px auto;
     }
@@ -730,17 +589,6 @@ footer form .btn{
     .header p{
         font-size: 17px;
     }
-    /* .banner_4 .banner-description hr {
-        width: 60%;
-        margin-right: 0;
-    } */
-    .banner_5 .banner-description h3 {
-        margin-top: 45%;
-    }
-    /* .banner_5 .banner-description hr {
-        width: 50%;
-        margin-left: 0;
-    } */
     .banner_6 .banner-description{
         text-align: center;
     }
@@ -766,13 +614,9 @@ footer form .btn{
     footer .logo{
         margin-bottom: 20px;
     }
-    footer .icon-download{
-        width: 50%;
-        margin: 5px auto;
-    }
-    footer .social{
-        width: 50%;
-        margin: auto;
+    footer .icon-download, footer .social{
+        justify-content: center;
+        margin: 5px 0;
     }
     footer form button.btn{
         display: flex;
@@ -783,6 +627,13 @@ footer form .btn{
 @media only screen and (max-width: 575px) {
     .banner {
         height: 440px !important;
+    }
+    .banner .banner-description{
+        width: 95%;
+        margin: 10px auto;
+    }
+    .banner .banner-description h3{
+        margin-top: 5%;
     }
     header .left-part {
         width: 85%;
@@ -815,13 +666,6 @@ footer form .btn{
     .header p{
         font-size: 16px;
     }
-    .banner_3 .banner-description h3 {
-        margin-top: 50%;
-    }
-    .banner .banner-description hr{
-        width: 50% !important;
-        margin-right: auto;
-    }
     .banner_3 .banner-description {
         text-align: center;
     }
@@ -831,41 +675,15 @@ footer form .btn{
     .banner_5 .banner-description {
         text-align: center;
     }
-    .banner_5 .banner-description hr {
-        width: 80%;
-    }
-    .banner_5 .banner-description hr{
-        margin: auto;
-        width: 50%;
-    }
-    .banner_5 .banner-description h3 {
-        margin-top: 55%;
-    }
     .banner_7 .banner-description {
         text-align: center;
     }
     .banner_7 .banner-description h3 {
         font-size: 20px;
     }
-    .banner_7 .banner-description hr{
-        margin: auto;
-        width: 50%;
-    }
-    .banner_7 .banner-description h3 {
-        margin-top: 55%;
-    }
-    .banner_8 .banner-description {
-        text-align: center;
-    }
-    .banner_8 .banner-description hr{
-        margin: auto;
-    }
     .categories img{
         margin-bottom: 10px;
     }
-
-
-
     footer h5 {
         font-size: 15px;
     }
@@ -890,9 +708,5 @@ footer form .btn{
     .banner_3 .banner-description hr{
         margin: auto;
     }
-    .banner_3 .banner-description h3 {
-        margin-top: 60%;
-    }
-    
 }
 /* end media query */
